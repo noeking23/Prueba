@@ -1,15 +1,25 @@
-var n = int.Parse(Console.ReadLine());
-int mayor = int.MinValue;
+using System;
 
-for (int i = 0; i < n; i++)
+public class Numeros
 {
-    Console.WriteLine("Ingrese un número:");
-    int num = int.Parse(Console.ReadLine());
-
-    if (num > mayor)
+    public static void HallarElMayor()
     {
-        mayor = num;
+        Console.WriteLine("Ingrese la cantidad de números a comparar:");
+        int n = int.Parse(Console.ReadLine());
+
+        int mayor = int.MinValue;
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine("Ingrese un número:");
+            int num = int.Parse(Console.ReadLine());
+
+            if (num > mayor)
+            {
+                mayor = num;
+            }
+        }
+
+        Console.WriteLine($"El número mayor es: {mayor}");
     }
 }
-
-Console.WriteLine($"El número mayor es: {mayor}");
