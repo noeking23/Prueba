@@ -1,3 +1,5 @@
+using System;
+
 Console.WriteLine("Ingrese la cantidad de números a comparar:");
 int n = int.Parse(Console.ReadLine());
 
