@@ -1,28 +1,19 @@
-﻿using System;
+using System;
 
-namespace MiProyecto
+Console.WriteLine("Ingrese la cantidad de números a comparar:");
+int n = int.Parse(Console.ReadLine());
+
+int mayor = int.MinValue;
+
+for (int i = 0; i < n; i++)
 {
-    class Program
+    Console.WriteLine("Ingrese un número:");
+    int num = int.Parse(Console.ReadLine());
+
+    if (num > mayor)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Ingrese la cantidad de números a comparar:");
-            int n = int.Parse(Console.ReadLine());
-
-            int mayor = int.MinValue;
-
-            for (int i = 0; i < n; i++)
-            {
-                Console.WriteLine("Ingrese un número:");
-                int num = int.Parse(Console.ReadLine());
-
-                if (num > mayor)
-                {
-                    mayor = num;
-                }
-            }
-
-            Console.WriteLine($"El número mayor es: {mayor}");
-        }
+        mayor = num;
     }
 }
+
+Console.WriteLine($"El número mayor es: {mayor}");
